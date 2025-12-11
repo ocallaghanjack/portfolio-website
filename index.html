@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jack O'Callaghan | Portfolio Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div id="site-wrapper">
 
-    <!-- INTRO SECTION -->
-    <section class="intro">
-        <div class="intro-columns">
-
-            <div class="left-col">
-                <h1>Jack O'Callaghan</h1>
-                <p>
-                    I am a 4th year undergrad studying Applied Mathematics and Computer Science
-                    at the University of Wisconsin–Stout with a minor in Sustainability. I aim
-                    to build data-driven software and leverage analytics to help people,
-                    organizations, and the world make informed decisions.
-                </p>
-            </div>
-
-            <div class="right-col">
-                <img src="headshot.jpg" alt="Headshot of Jack O'Callaghan" class="headshot">
-
-                <ul class="nav-links">
-                    <li><a href="#project-section">View Projects</a></li>
-                    <li><a href="#contact-section">Contact Me</a></li>
-                    <li><a href="test_resume.pdf" download="jack_ocallaghan_resume.pdf">Download Resume (PDF)</a></li>
+        <div class="container">
+            <div class="nav-bar">
+                <h1 class="section-title">Jack O'Callaghan</h1>
+                <ul class="nav-inline">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#resume">Resume</a></li>
                 </ul>
             </div>
-
         </div>
-    </section>
 
+        <div class="container" id="about">
+            <section class="about" id="#about">
+                <div class="column-left">
+                    <h1 class="section-title">About Me</h1>
+                    <p>
+                        I am a 4th year undergrad studying 
+                        <a href="https://www.uwstout.edu/programs/bs-applied-mathematics-computer-science/">Applied Mathematics and Computer Science</a>
+                        at the 
+                        <a href="https://www.uwstout.edu/">University of Wisconsin–Stout</a> 
+                        with a minor in 
+                        <a href="https://www.uwstout.edu/programs/sustainability-minor">Sustainability</a>.
+                        I aim to build data-driven software and leverage analytics to help people,
+                        organizations, and the world make informed decisions.
+                    </p>
 
-
-    <!-- PROJECTS SECTION -->
-    <section id="project-section" class="section">
-        <h3>Projects</h3>
-
-        <div class="project-grid">
-
-            <!-- Forest Project Card -->
-            <div class="card">
-                <a href="forest_project.html">
-                    <img src="project_images/forest_card_image.png" alt="forest project">
-                    <div class="card-content">
-                        <h4>Forest Project</h4>
-                        <p>Environmental observations and analysis of forest conditions.</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Ocean Project Card -->
-            <div class="card">
-                <a href="ocean_project.html">
-                    <img src="project_images/ocean_card_image.png" alt="ocean project">
-                    <div class="card-content">
-                        <h4>Ocean Project</h4>
-                        <p>Data-driven analysis of ocean features and environmental patterns.</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Desert Project Card -->
-            <div class="card">
-                <a href="desert_project.html">
-                    <img src="project_images/desert_card_image.png" alt="desert project">
-                    <div class="card-content">
-                        <h4>Desert Project</h4>
-                        <p>Exploration and observation of desert ecosystems.</p>
-                    </div>
-                </a>
-            </div>
-
+                </div>
+                <div class="column-right">
+                    <img src="professional_headshot.jpg" alt="Jack O’Callaghan headshot" class="headshot">
+                </div>
+            </section>
         </div>
-    </section>
 
+        <div class="container" id="projects">
+            <h1 class="section-title" id="#projects">Projects</h1>
+            <div class="card-container">
+                <div class="card">
+                    <img src="website_project_image.png" alt="Portfolio Website">
+                    <h3>Portfolio Website</h3>
+                    <p>The website you are using right now to view my projects.</p>
+                </div>
 
+                <div class="card">
+                    <img src="ipeds_project_iamge.png" alt="Datatelligent Company Logo">
+                    <h3>IPEDS Data Contribution</h3>
+                    <p>I refactored some Python scripts to create a smoother transition between raw data and a company tool.</p>
+                </div>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact-section" class="section">
-        <h3>Contacts</h3>
+                <div class="card">
+                    <img src="marathon_project_image.png" alt="New Chicago Marathon Logo">
+                    <h3>The Marathon Analysis</h3>
+                    <p>A project I am currently working on is developing a marathon time analysis dashboard.</p>
+                </div>
+            </div>
+        </div>
 
-        <ul class="contact-list">
-            <li><a href="mailto:ocallaghanj0577@my.uwstout.edu">School Email</a></li>
-            <li><a href="https://www.linkedin.com/in/jack-ocallaghan-882501245/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/ocallaghanjack" target="_blank">GitHub</a></li>
-        </ul>
-    </section>
+        <div class="container" id="contact">
+            <h1 class="section-title" id="#contact">Contact</h1>
+            <div class="card-container">
+                <div class="contact-card" id="email">
+                    <h3 href='ocallaghanj0577@my.uwstout.edu'>Email</h3>
+                </div>
+                <div class="contact-card" id="linkedin">
+                    <h3>LinkedIn</h3>
+                </div>
+                <div class="contact-card" id="github"> 
+                    <h3>GitHub</h3>
+                </div>
+            </div>
+        </div>
 
+    </div>
 </body>
+
+<script>
+    document.getElementById('github').addEventListener('click', function() {
+        window.location.href = 'https://github.com/ocallaghanjack';
+    });
+
+    document.getElementById('linkedin').addEventListener('click', function() {
+        window.location.href = 'https://www.linkedin.com/in/jack-ocallaghan-882501245';
+    });
+
+    document.getElementById('email').addEventListener('click', function() {
+        window.location.href = 'mailto:ocallaghanj0577@my.uwstout.edu';
+    });
+</script>
+
 </html>
